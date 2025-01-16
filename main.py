@@ -43,6 +43,7 @@ def compare_liste(lst1,lst2):
     return nombre_de_difference
 
 def affichage():
+    print("\n" * 40)
     print("Bienvenu au jeu de mémoire.")
     print()
     print("Objectif : Le but du jeu est de tester ta mémoire et de voir jusqu'à quel niveau tu peux aller en reproduisant des séquences de nombres qui sera de plus en plus longue à travers les niveaux.")
