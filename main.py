@@ -32,7 +32,7 @@ def compare_liste(lst1, lst2):
     assert len(lst1) == len(lst2)
     if lst1 == [] or lst2 == []:
         print("Tapez une liste non vide")
-        return None
+        return
     nombre_de_difference = 0
     if lst1[0] != lst2[0]:
         nombre_de_difference = nombre_de_difference + 1
