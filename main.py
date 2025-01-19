@@ -14,8 +14,8 @@ def saisie_liste(n):
     """ Génère une liste de longueur n en nous demandant les entiers voulus """
     assert n > 0
     l = []
-    for _ in range(n):
-        a = int(input("Veuillez tapez un entier : "))
+    for i in range(n):
+        a = int(input(f"Veuillez taper l'entier numéro {i+1} seulement : "))
         l.append(a)
     return l
 
