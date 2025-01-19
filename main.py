@@ -1,25 +1,25 @@
 from random import randint
 from time import sleep
 
-def genere_liste_aleatoire(n):
+def genere_liste_aleatoire(niveau):
     """ Génère une liste de longueur n avec des élements aléatoires """
-    assert n > 0
-    global lst_alea
-    lst_alea = []
+    assert niveau > 0
+    global lst_aleatoire
+    lst_aleatoire = []
     for _ in range(n):
-        lst_alea.append(randint(10, 99))
-    return lst_alea
+        lst_aleatoire.append(randint(10, 99))
+    return lst_aleatoire
 
-def saisie_liste(n):
+def saisie_liste(niveau):
     """ Génère une liste de longueur n en nous demandant les entiers voulus """
-    assert n > 0
-    l = []
-    for i in range(n):
-        a = int(input(f"Veuillez taper l'entier numéro {i+1} seulement : "))
-        l.append(a)
-    return l
+    assert niveau > 0
+    lst_saisie = []
+    for i in range(niveau):
+        entier_saisie = int(input(f"Veuillez taper l'entier numéro {i+1} seulement : "))
+        lst_saisie.append(entier_saisie)
+    return lst_saisie
 
-def mystere(lst,n):
+def mystere(lst, n):
     """ Renvoie le nombre de fois que le chiffre n est dans la liste """
     compteur = 0
     for elt in lst:
@@ -27,7 +27,7 @@ def mystere(lst,n):
             compteur = compteur + 1
     return compteur
 
-def compare_liste(lst1,lst2):
+def compare_liste(lst1, lst2):
     """ Compare deux liste et renvoie le nombre d'erreur """
     assert len(lst1) == len(lst2)
     if lst1 == [] or lst2 == []:
