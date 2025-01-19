@@ -6,7 +6,7 @@ def genere_liste_aleatoire(niveau):
     assert niveau > 0
     global lst_aleatoire
     lst_aleatoire = []
-    for _ in range(n):
+    for _ in range(niveau):
         lst_aleatoire.append(randint(10, 99))
     return lst_aleatoire
 
