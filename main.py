@@ -34,10 +34,9 @@ def compare_liste(lst1, lst2):
         print("Tapez une liste non vide")
         return None
     nombre_de_difference = 0
-    l = len(lst1)
     if lst1[0] != lst2[0]:
         nombre_de_difference = nombre_de_difference + 1
-    for i in range(l):
+    for i in range(len(lst1)):
         if lst1[i] != lst2[i]:
             nombre_de_difference = nombre_de_difference + 1
     return nombre_de_difference
