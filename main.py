@@ -11,13 +11,19 @@ def genere_liste_aleatoire(niveau):
     return lst_aleatoire
 
 def saisie_liste(niveau):
-    """ Génère une liste de longueur n en nous demandant les entiers voulus """
+    """ Génère une liste de longueur n en demandant les entiers voulus """
     assert niveau > 0
     lst_saisie = []
     for i in range(niveau):
-        entier_saisie = int(input(f"Veuillez taper l'entier numéro {i+1} seulement : "))
-        lst_saisie.append(entier_saisie)
+        while True:
+            try:
+                entier_saisie = int(input(f"Veuillez taper l'entier numéro {i+1} : "))
+                lst_saisie.append(entier_saisie)
+                break
+            except ValueError:
+                print("Entrée invalide. Veuillez taper un entier.")
     return lst_saisie
+
 
 def mystere(lst, n):
     """ Renvoie le nombre de fois que le chiffre n est dans la liste """
@@ -28,17 +34,12 @@ def mystere(lst, n):
     return compteur
 
 def compare_liste(lst1, lst2):
-    """ Compare deux liste et renvoie le nombre d'erreur """
+    """ Compare deux listes et renvoie le nombre d'erreurs """
     assert len(lst1) == len(lst2)
-    if lst1 == [] or lst2 == []:
-        print("Tapez une liste non vide")
-        return
     nombre_de_difference = 0
-    if lst1[0] != lst2[0]:
-        nombre_de_difference = nombre_de_difference + 1
     for i in range(len(lst1)):
         if lst1[i] != lst2[i]:
-            nombre_de_difference = nombre_de_difference + 1
+            nombre_de_difference += 1
     return nombre_de_difference
 
 def affichage():
@@ -73,8 +74,8 @@ while True:
         print()
     else:
         print("Perdu !")
-        print("La réponse était :")
+        print("La réponse était :                   Tu as répondu :")
         for i in range(len(cible)):
-            print(cible[i])
+            print(cible[i], "                                 ", reponse[i])
         print("Tu a perdu au niveau", niveau)
         break
