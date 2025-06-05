@@ -28,5 +28,6 @@ L'objectif est de réussir à mémoriser le plus grand nombre de séquences poss
 ## Prérequis
 
 Pour exécuter ce jeu, vous avez besoin de :
+
 - Python 3.7 ou une version ultérieure.
 - La bibliothèque `random` et `time`.
